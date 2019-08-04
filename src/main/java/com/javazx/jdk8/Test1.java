@@ -28,6 +28,12 @@ public class Test1 {
             }
         });
         System.out.println("---------------------------------");
+        list.forEach(integer ->
+                System.out.println(integer));
+        System.out.println("-------------方法引用 method interface--------------------");
+        //方法引用 method interface
+        list.forEach(
+                System.out::println);
 
     }
 }
