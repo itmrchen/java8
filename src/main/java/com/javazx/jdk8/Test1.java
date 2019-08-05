@@ -49,6 +49,7 @@ public class Test1 {
 
         System.out.println("-------------list中元素改大写 stream写法--------------------");
         listString.stream().map(item -> item.toUpperCase()).forEach(str -> System.out.println(str));
+        System.out.println("-------------list中元素改大写 stream写法 方法引用--------------------");
         listString.stream().map(String::toUpperCase).forEach(str -> System.out.println(str));
 
 
