@@ -70,6 +70,15 @@ public class StreamTest {
         uuidStream.findFirst().ifPresent(System.out::println);
         //无限串行流  所以一般加个limit的限制
         Stream.iterate(1, item -> item + 2).limit(6).forEach(System.out::println);
+        System.out.println("------------------ continue test ---------------------");
+        List<Integer> integerListTest = Arrays.asList(1, 2, 3, 4, 5, 6);
+        integerListTest.forEach(item -> {
+            if (item > 2 && item < 6) {
+                return;
+            } else {
+                System.out.println(item);
+            }
+        });
 
     }
 }
